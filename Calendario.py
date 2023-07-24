@@ -9,14 +9,8 @@ ano = int(ano)
 #valor do ano
 ultimos_digitos_ano = ano % 100
 
-if ultimos_digitos_ano == 0: 
-    valor_ano_final = 0
-if ultimos_digitos_ano == 1:
-    valor_ano_final = 1
-if ultimos_digitos_ano == 2: 
-    valor_ano_final = 2
-if ultimos_digitos_ano == 3: 
-    valor_ano_final = 3
+if ultimos_digitos_ano <= 3:
+    valor_ano_final = ultimos_digitos_ano
 
 else: 
     valor_ano_cheio = (ultimos_digitos_ano // 4) + (ultimos_digitos_ano - ((ultimos_digitos_ano // 7) * 7))
