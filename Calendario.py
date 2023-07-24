@@ -49,11 +49,11 @@ seculo = int(primeiros_algarismos_ano) + 1
 
 if (seculo - ((seculo // 4) *4)) == 0: 
     valor_seculo = 0
-elif (seculo - ((seculo // 4) *4)) == 1: 
+if (seculo - ((seculo // 4) *4)) == 1: 
     valor_seculo = 6
-elif (seculo - ((seculo // 4) *4)) == 2: 
+if (seculo - ((seculo // 4) *4)) == 2: 
     valor_seculo = 4
-elif (seculo - ((seculo // 4) *4)) == 3: 
+if (seculo - ((seculo // 4) *4)) == 3: 
     valor_seculo = 2
 
 #valida bissexto
