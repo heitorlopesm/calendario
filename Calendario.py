@@ -43,9 +43,7 @@ if mes == 12:
     valor_mes = 6
 
 #seculo
-ano_string = str(ano)
-primeiros_algarismos_ano = ano_string[:2]
-seculo = int(primeiros_algarismos_ano) + 1
+seculo = (ano // 100) + 1
 
 if (seculo - ((seculo // 4) *4)) == 0: 
     valor_seculo = 0
@@ -71,9 +69,7 @@ def eh_bissexto(ano):
 
 #calculo
 soma_valores = (dia + valor_mes + valor_ano_final + valor_seculo)
-if eh_bissexto(ano) and mes == 1:
-    soma_valores = (soma_valores - 1)
-if eh_bissexto(ano) and mes == 2: 
+if eh_bissexto(ano) and mes <= 2:
     soma_valores = (soma_valores - 1)
 
 dia_semana = (soma_valores - ((soma_valores // 7) * 7))
