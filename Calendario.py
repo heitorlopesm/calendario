@@ -71,7 +71,9 @@ def eh_bissexto(ano):
 
 #calculo
 soma_valores = (dia + valor_mes + valor_ano_final + valor_seculo)
-if eh_bissexto(ano):
+if eh_bissexto(ano) and mes == 1:
+    soma_valores = (soma_valores - 1)
+if eh_bissexto(ano) and mes == 2: 
     soma_valores = (soma_valores - 1)
 
 dia_semana = (soma_valores - ((soma_valores // 7) * 7))
